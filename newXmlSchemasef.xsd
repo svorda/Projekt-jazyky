@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+   <xs:element name="email">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="general">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="language">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="gmail_display_language">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="jazyk">
+                                          <xs:attribute type="xs:string" name="charset" />
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="phone_numbers">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="zeme" name="default_country_code" />
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="maximum_page_size">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="cislo" name="show_conversation_per_page" />
+                              <xs:element type="cislo" name="show_contacts_per_page" />
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="images">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="onoff" name="always_display_external_images" />
+                              <xs:element type="onoff" name="ask_before_displaying_external_images" />
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="replay_" name="defualt_reply_behavior" />
+                     <xs:element type="font_em" name="defualt_text_style" />
+                     <xs:element name="conversation_view">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="onoff">
+                                 <xs:attribute type="xs:string" name="notification" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="showhide" name="send_and_archive" />
+                     <xs:element name="undo_send">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="onoff">
+                                 <xs:attribute type="xs:string" name="cancelation" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="desktop_noti">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="mail_noti">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="onoff">
+                                          <xs:attribute type="xs:string" name="mobile_not" />
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="onoff" name="keyboard_shortcuts" />
+                     <xs:element type="icontext" name="button_lab" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="label">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="system_lab">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="showhide" name="starred" />
+                              <xs:element type="showhide" name="important" />
+                              <xs:element type="showhide" name="chats" />
+                              <xs:element type="showhide" name="sent_mail" />
+                              <xs:element type="showhide" name="darts" />
+                              <xs:element type="showhide" name="all_mail" />
+                              <xs:element type="showhide" name="spam" />
+                              <xs:element type="showhide" name="trash" />
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="categories">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element type="showhide" name="categ" />
+                              <xs:element type="showhide" name="social" />
+                              <xs:element type="showhide" name="promotions" />
+                              <xs:element type="showhide" name="updates" />
+                              <xs:element type="showhide" name="forums" />
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="circles">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="friends">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute type="xs:string" name="always" />
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="family">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute type="xs:string" name="always" />
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="filters_blocked">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="account" maxOccurs="unbounded" minOccurs="0">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute type="xs:string" name="type" use="optional" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="pop_imap">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="pop">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="onoff">
+                                 <xs:attribute type="xs:string" name="access" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="onoff" name="imap" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element type="onoff" name="chat" />
+            <xs:element name="themes">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element type="decompo_" name="decomposition" />
+                     <xs:element name="galery">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="pic">
+                                 <xs:attribute type="xs:string" name="background" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="font">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="style">
+                                 <xs:attribute type="xs:string" name="type" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="cislo" name="font_size" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="privacy">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="password">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:short">
+                                 <xs:attribute type="xs:string" name="security" />
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element type="xs:string" name="name_acc" />
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="times">
+               <xs:complexType>
+                  <xs:simpleContent>
+                     <xs:extension base="cas">
+                        <xs:attribute type="xs:string" name="format" />
+                     </xs:extension>
+                  </xs:simpleContent>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:simpleType name="onoff">
+      <!-- definice proměnné pro Enable a disable-->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Enable" />
+         <xs:enumeration value="Disable" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="showhide">
+      <!-- definice proměnné pro show a hide -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Show" />
+         <xs:enumeration value="Hide" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="cislo">
+      <!-- Omezení pro cisla-->
+      <xs:restriction base="xs:string">
+         <xs:minLength value="1" />
+         <xs:maxLength value="250" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="zeme">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Czech Republic" />
+         <xs:enumeration value="Slovakia" />
+         <xs:enumeration value="Germany" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="jazyk">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="English" />
+         <xs:enumeration value="Czech" />
+         <xs:enumeration value="Danish" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="replay_">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Reply" />
+         <xs:enumeration value="Reply all" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="font_em">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Timew New Roman" />
+         <xs:enumeration value="Bodoni MT Bold Italic" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="icontext">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Icons" />
+         <xs:enumeration value="Text" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="cas">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="UTC+12" />
+         <xs:enumeration value="UTC+02" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="decompo_">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Default" />
+         <xs:enumeration value="Right" />
+         <xs:enumeration value="Left" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="pic">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Sci-fi" />
+         <xs:enumeration value="Horror" />
+         <xs:enumeration value="Nature" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="style">
+      <!-- Omezení nastavení protokolů -->
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Timew New Roman" />
+         <xs:enumeration value="Bodoni MT Bold Italic" />
+         <xs:enumeration value="Berlin Sans FB Bold" />
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

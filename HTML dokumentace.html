@@ -1,0 +1,361 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+  <!-- Odkaz na github: -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="Author" content="David Švorc">
+  <title>Dokumentace - Nastavení webové aplikace GMAIL</title>     
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <nav>
+      <h3>Obsah:</h3>
+      <ul>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metodika">Metodika - Použité nástroje</a></li>
+        <li><a href="#popis">Popis elementů a atributů</a></li>
+        <li><a href="#transf">Popis transformace</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+      </ul>
+      <hr />
+    </nav>
+    <main>
+      <section id="uvod">
+        <article>
+          <header>
+            <h2>Úvod</h2>
+          </header>          
+          <p>
+          Téma semestrálního projektu jsem si zvolil nastavení webové emailové aplikace GMAIL o Google. Email od Google má a využívá mnoho uživatelů a většina z nich používá právě standardní webové rozhraní Gmail.com.
+          Proto jsem vytvořil nastavení pro tuto aplikaci.           
+          </p> 
+        </article>
+      </section>
+      <section id="metodika">
+        <article>
+          <header>
+            <h2>Metodika</h2>
+          </header>
+          <h3>Využité programy</h3>
+          <p>
+          Při vytváření projektu jsem používal programy <a href="https://www.sublimetext.com/">Sublime Text</a>, <a href="http://www.pspad.com/cz/">PSPad</a>, 
+          a prohlížeče <a href="https://www.microsoft.com/cs-cz/download/internet-explorer.aspx">Internet Explorer </a> a <a href="https://www.google.com/chrome/">Google Chrome</a>.    
+          </p>
+          <h3>Využité webové stránky a zdroje</h3>
+          <p>
+            Jako zdroj informací pro vytváření projektu jsem využíval školní prezentace na cvičení z Moodle. Podrobnější a odbornější informace jsem čerpal ze stránek <a href="https://www.w3schools.com/">W3Schools</a>.
+            Validaci jsem provedl přes <a href="https://validator.w3.org/">oficální validátor W3</a>
+          </p>        
+        </article>
+      </section>
+      <section id="popis" >
+        <article>
+          <header>
+            <h2>Popis elementů a atributů</h2>
+          </header>
+          <h3>Použité elementy</h3>
+          <table border="1" id="elementy" title="Tabulka elementů">
+            <tr>
+              <td>Název elementu</td>
+              <td>Popis elementu</td>
+            </tr>
+            <tr>                       
+              <td>email</td>
+              <td>root nastaveni aplikace</td>
+            </tr>
+             <tr>                       
+              <td>general</td>
+              <td>Hlavní nastavení</td>
+            </tr>
+            <tr>                       
+              <td>languages</td>
+              <td>Jazyk rozhraní aplikace</td>
+            </tr>
+            <tr>                       
+              <td>gmail_display_language</td>
+              <td>Výběr jazyka</td>
+            </tr>
+            <tr>                       
+              <td>phone_numbers</td>
+              <td>Nastavení čísel v telefonním adresáři</td>
+            </tr> 
+            <tr>                       
+              <td>default_country_code</td>
+              <td>Výchozí předvolba k telefonním číslům</td>
+            </tr>
+            <tr>                       
+              <td>maximum_page_size</td>
+              <td>Určuje kolik řádků informací se zobrazí na jednu stránku</td>
+            </tr>
+            <tr>                       
+              <td>show_conversation_per_page</td>
+              <td>počet zobrazených emailů na stránku</td>
+            </tr>
+            <tr>                       
+              <td>show_contacts_per_page</td>
+              <td>počet zobrazených kontaktů na stránku</td>
+            </tr>
+            <tr>                       
+              <td>images</td>
+              <td>zobrazení obrázků v emailu</td>
+            </tr>
+            <tr>                       
+              <td>always_display_external_images</td>
+              <td>Vždy zobrazit přiložené obrázky</td>
+            </tr>
+            <tr>                       
+              <td>ask_before_displaying_external_images</td>
+              <td>Před zobrazením se vždy zeptat uživatele</td>
+            </tr>
+            <tr>                       
+              <td>defualt_reply_behavior</td>
+              <td>Výchozí nastavení při odpovědi na email</td>
+            </tr> 
+            <tr>                       
+              <td>defualt_text_style</td>
+              <td>Nastavení výchozího formátu textu při psaní</td>
+            </tr>
+            <tr>                       
+              <td>conversation_view</td>
+              <td>Seskupení emailů do konverzace nebo je ponechat jednotlivě</td>
+            </tr>
+            <tr>                       
+              <td>send_and_archive</td>
+              <td>Odeslaný email se automaticky přesune do archivu</td>
+            </tr>
+            <tr>                       
+              <td>undo_send</td>
+              <td>Po odeslání emailu je možné ještě do určité doby odeslání stornovat </td>
+            </tr>
+            <tr>                       
+              <td>desktop_noti</td>
+              <td>Notifikace události ploše operačního systému</td>
+            </tr>
+            <tr>                       
+              <td>mail_noti</td>
+              <td>Notifikace o novém emailu</td>
+            </tr>
+            <tr>                       
+              <td>keyboard_shortcuts</td>
+              <td>klávesové zkratky v aplikaci</td>
+            </tr>
+            <tr>                       
+              <td>button_lab</td>
+              <td>Nastavení popisku tlačítek</td>
+            </tr>
+            <tr>                       
+              <td>label</td>
+              <td>Sekce pro nastavení štítků a složek pošty</td>
+            </tr>
+            <tr>                       
+              <td>starred</td>
+              <td>Zobrazení složky s emaily označené hvězdičkou</td>
+            </tr>
+            <tr>                       
+              <td>important</td>
+              <td>Zobrazení složky s emaily označené jako důležité</td>
+            </tr>
+            <tr>                       
+              <td>chats</td>
+              <td>Zobrazení složky s konverzacemi přes integrovaný chat</td>
+            </tr>
+            <tr>                       
+              <td>sent_mail</td>
+              <td>Zobrazení složky s odchozí poštou</td>
+            </tr>
+            <tr>                       
+              <td>darts</td>
+              <td>Zobrazení složky s rozepsanou poštou</td>
+            </tr>
+            <tr>                       
+              <td>all_mail</td>
+              <td>Zobrazení složky se všemi emaily bez rozdílu jak jsou označené</td>
+            </tr>
+            <tr>                       
+              <td>spam</td>
+              <td>Zobrazení složky s nevyžádanou poštou</td>
+            </tr>
+            <tr>                       
+              <td>trash</td>
+              <td>Zobrazení složky s odstraněnou poštou</td>
+            </tr>
+            <tr>                       
+              <td>categories</td>
+              <td>Emaily roztříděné dle kategorií</td>
+            </tr>
+            <tr>                       
+              <td>categ</td>
+              <td>Zobrazení různých kategorií</td>
+            </tr>
+            <tr>                       
+              <td>social</td>
+              <td>Kategorie s emaily, které jsou od sociálních sítí (Facebook apod.)</td>
+            </tr>
+            <tr>                       
+              <td>promotions</td>
+              <td>Kategorie s emaily, které jsou s promo nabídkama (akční letáky apod.)</td>
+            </tr>
+            <tr>                       
+              <td>updates</td>
+              <td>Kategorie s emaily, které jsou obsahují nejako provedenou akci (rezervace v hotelu, report dat ze systému apod.)</td>
+            </tr>
+            <tr>                       
+              <td>forums</td>
+              <td>Kategorie s emaily, které jsou z nějakého diskuzního fóra</td>
+            </tr>  
+            <tr>                       
+              <td>updates</td>
+              <td>Kategorie s emaily, které jsou obsahují nejako provedenou akci (rezervace v hotelu, report dat ze systému apod.)</td>
+            </tr>  
+            <tr>                       
+              <td>circles</td>
+              <td>Zobrazení pošty, které jsou zasílány v kruhu známých lidí</td>
+            </tr>  
+            <tr>                       
+              <td>friends</td>
+              <td>Pošta zasílaná v kruhu přátel</td>
+            </tr>  
+            <tr>                       
+              <td>family</td>
+              <td>Pošta zasílaná v kruhu rodinných příbuzných</td>
+            </tr>  
+            <tr>                       
+              <td>filters_blocked</td>
+              <td>Nastavení různých omezeních pro příchozí poštu</td>
+            </tr>  
+            <tr>                       
+              <td>account</td>
+              <td>Pokud příchozí email bude od někoho z tohoto seznamu, bude email automaticky blokován a  mazán</td>
+            </tr> 
+            <tr>                       
+              <td>filters_blocked</td>
+              <td>Nastavení různých omezeních pro příchozí poštu</td>
+            </tr>  
+            <tr>                       
+              <td>pop_imap</td>
+              <td>Nastavení protokolu pošty pro emailové klienty třetích stran (Outlook, Thunderbird apod.)</td>
+            </tr>  
+            <tr>                       
+              <td>pop</td>
+              <td>Povolení protkolu POP3</td>
+            </tr>  
+            <tr>                       
+              <td>imap</td>
+              <td>Povolení protkolu IMAP</td>
+            </tr>  
+            <tr>                       
+              <td>chat</td>
+              <td>Povolení integrovaný chat</td>
+            </tr>  
+            <tr>                       
+              <td>themes</td>
+              <td>Změna motivu WEB emailového klienta</td>
+            </tr> 
+            <tr>                       
+              <td>decomposition</td>
+              <td>Změna rozložení ovládacích prvků</td>
+            </tr> 
+            <tr>                       
+              <td>galery</td>
+              <td>Zvolení obrázku na pozadí aplikace</td>
+            </tr> 
+            <tr>                       
+              <td>font_size</td>
+              <td>Změna fontu písma celé aplikace</td>
+            </tr> 
+            <tr>                       
+              <td>privacy</td>
+              <td>Nastavení soukromých údajů
+            </tr>
+            <tr>                       
+              <td>password</td>
+              <td>Heslo do uživatelského účtu</td>
+            </tr> 
+            <tr>                       
+              <td>name_acc</td>
+              <td>Název uživatelského účtu</td>
+            </tr> 
+            <tr>                       
+              <td>times</td>
+              <td>Nastavení formátu datumu, času</td>
+            </tr>                                                         
+          </table>
+          <h3>Použité atributy</h3>
+          <table border="1" id="atributy" title="Tabulka atributů">
+            <tr>
+              <td>Název atributu</td>
+              <td>Popis atributu</td>
+            </tr>
+            <tr>                       
+              <td>charset</td>
+              <td>Charset nastavení</td>
+            </tr>
+            <tr>                       
+              <td>notification</td>
+              <td>Upozornění na konverzaci chatu</td>
+            </tr>
+            <tr>                       
+              <td>cancelation</td>
+              <td>Email můžeme zrušit do 10 sekund po odeslání</td>
+            </tr>
+            <tr>                       
+              <td>mobile_not</td>
+              <td>Zasílání notifikace na mobilní telefon</td>
+            </tr>
+            <tr>                       
+              <td>always</td>
+              <td>Vždy zobrazit vybrané zprávy</td>
+            </tr>
+            <tr>                       
+              <td>type</td>
+              <td>Atribut pro blokaci komunikace</td>
+            </tr>
+            <tr>                       
+              <td>access</td>
+              <td>Přístup ke zpávám</td>
+            </tr>
+            <tr>                       
+              <td>background</td>
+              <td>Změna pozadí aplikace</td>
+            </tr>
+            <tr>                       
+              <td>security</td>
+              <td>Atribut pro hesla</td>
+            </tr>
+            <tr>                       
+              <td>format</td>
+              <td>Atribut v jakém formátová bude zobrazen čas</td>
+            </tr>                        
+          </table>
+        </article>
+      </section>
+      <section id="transf">
+        <article>
+          <header>
+            <h2>Popis transformace</h2>
+          </header>
+          <p>Transformace byla provedena z původního XML souboru do <strong>JSON</strong> 
+          V souboru settings_1 je pomocí cyklu if else ověření, zda je položka pro důležité emaily zapnuta, aby se nám nestalo, ze by tato funkce byla vypnuta.
+          V souboru settings_2 je kompletní výpis nastavení kategorie kde je email začleněn.</p>
+        </article>
+      </section>
+      <section id="zaver">
+        <article>
+          <header>
+            <h2>Závěr</h2>
+          </header>
+          <p>V rámci vytváření projektu jsem získal větší znalosti ve vytváření v XML, HTML.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+    <p>Autor: <strong>David Švorc</strong> | Česká Zemědělská univerzita Praha, dne 27.4.2017</p>
+    </footer>
+    </div>
+  </body>
+</html>

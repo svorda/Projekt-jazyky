@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<email>
+   <general>
+      <language>
+         <gmail_display_language charset="UTF-8">Czech</gmail_display_language>
+         <!--charset nastaveníí-->
+      </language>
+      <phone_numbers>
+         <default_country_code>Czech Republic</default_country_code>
+      </phone_numbers>
+      <maximum_page_size>
+         <show_conversation_per_page>50</show_conversation_per_page>
+         <show_contacts_per_page>250</show_contacts_per_page>
+      </maximum_page_size>
+      <images>
+         <always_display_external_images>Enable</always_display_external_images>
+         <ask_before_displaying_external_images>Disable</ask_before_displaying_external_images>
+      </images>
+      <defualt_reply_behavior>Reply</defualt_reply_behavior>
+      <defualt_text_style>Timew New Roman</defualt_text_style>
+      <conversation_view notification="enable">Enable</conversation_view>
+      <!-- upozorneni na konverzaci chatu-->
+      <send_and_archive>Hide</send_and_archive>
+      <undo_send cancelation="10">Enable</undo_send>
+      <!-- Email muzem zrusit do 10 sekund po odeslani-->
+      <desktop_noti>
+         <mail_noti mobile_not="enable">Disable</mail_noti>
+         <!-- notifikace na mobil zaslání-->
+      </desktop_noti>
+      <keyboard_shortcuts>Disable</keyboard_shortcuts>
+      <button_lab>Icons</button_lab>
+   </general>
+   <label>
+      <system_lab>
+         <starred>Show</starred>
+         <important>Show</important>
+         <chats>Hide</chats>
+         <sent_mail>Show</sent_mail>
+         <darts>Show</darts>
+         <all_mail>Hide</all_mail>
+         <spam>Hide</spam>
+         <trash>Hide</trash>
+      </system_lab>
+      <categories>
+         <categ>Hide</categ>
+         <social>Show</social>
+         <promotions>Show</promotions>
+         <updates>Show</updates>
+         <forums>Show</forums>
+      </categories>
+      <circles>
+         <friends always="enable">Show</friends>
+         <!-- vzdy zobrazit zpravy od prazel a rodiny jako prvni-->
+         <family always="enable">Show</family>
+      </circles>
+   </label>
+   <filters_blocked>
+      <account type="mute">Pohap@seznam.cz</account>
+      <!-- atribut pro blokaci komunikace, lze sledovat byt ve skupinove konverzaci-->
+      <account type="blocking">Gogs@gmail.com</account>
+      <!-- ignorovani priloh uzivatele -->
+   </filters_blocked>
+   <pop_imap>
+      <pop access="enable">Enable</pop>
+      <!-- pristup ke zpravam -->
+      <imap>Enable</imap>
+   </pop_imap>
+   <chat>Enable</chat>
+   <themes>
+      <decomposition>Default</decomposition>
+      <galery background="black">Sci-fi</galery>
+      <font type="bold">Bodoni MT Bold Italic</font>
+      <font_size>12</font_size>
+   </themes>
+   <privacy>
+      <password security="enable">12345</password>
+      <!-- security hesla/slozitost-->
+      <name_acc>SPuxy@gasga.com</name_acc>
+   </privacy>
+   <times format="XX:YY">UTC+12</times>
+</email>
